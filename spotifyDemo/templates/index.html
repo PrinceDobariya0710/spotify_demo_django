@@ -1,0 +1,99 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block extra_css %}{% endblock %}
+    {% block head_js %}{% endblock %}
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css" />
+    <script>
+
+    var one = "{% static 'mp3/1.mp3' %}"
+    var two = "{% static 'mp3/2.mp3' %}"
+    var three = "{% static 'mp3/3.mp3' %}"
+    var four = "{% static 'mp3/4.mp3' %}"
+    var one_c = "{% static '/photos/cover/c1.jpg' %}"
+    var two_c = "{% static '/photos/cover/c2.jpg' %}"
+    var three_c = "{% static '/photos/cover/c3.jpg' %}"
+    var four_c = "{% static '/photos/cover/c4.jpg' %}"
+
+
+</script>
+</head>
+<body>
+  
+    <nav>
+        <ul>
+            <li class="brand">
+                <img src="{% static 'photos/spoti.png' %}" alt="error" >
+                Spotify Demo by Prince
+            </li>
+            <li>HOME
+            </li>
+            <li>ABOUT
+            </li>
+            <li>HELP
+            </li>
+        </ul>
+
+        <div class="container">
+                Copyright is issued
+                <div class="songcontainer">
+                <div class="songlist">
+                          <div class="songitem">
+                            <img src="{% static 'photos/music.jpg' %}" alt="" class="im" height="50px" width="50px">
+                            <span class="songname">Odhani By Darshan Raval</span>
+                            <span class="songlistplay"><span>05:36</span> <i id="0"  class="fas play fa-3x fa-play-circle">
+{#                                <audio id="one_audio">#}
+{#                                    <source src="{% static 'mp3/1.mp3' %}" type="audio/mpeg">#}
+{#                                </audio>#}
+                            </i></span>
+                          </div>
+                </div>
+                <div class="songlist">
+                          <div class="songitem">
+                            <img src="{% static 'photos/music.jpg' %}" alt="" class="im" height="50px" width="50px">
+                            <span class="songname">Odhani By Darshan Raval</span>
+                            <span class="songlistplay"><span>05:36</span> <i id="1" class="fas play fa-3x fa-play-circle"></i></span>
+                          </div>
+                </div>
+                <div class="songlist">
+                          <div class="songitem">
+                            <img src="{% static 'photos/music.jpg' %}" alt="" class="im" height="50px" width="50px">
+                            <span class="songname">Odhani By Darshan Raval</span>
+                            <span class="songlistplay"><span>05:36</span> <i  id="2"  class="fas play fa-3x fa-play-circle"></i></span>
+                          </div>
+                </div>
+                <div class="songlist">
+                          <div class="songitem">
+                            <img src="{% static 'photos/music.jpg' %}" alt="" class="im" height="50px" width="50px">
+                            <span class="songname">Odhani By Darshan Raval</span>
+                            <span class="songlistplay"><span>05:36</span> <i id="3"   class="fas play fa-3x fa-play-circle"></i></span>
+                          </div>
+                        </div>
+                </div>
+            <div class="songbanner"></div>
+        </div>
+        <div class="bottom">
+            <input type="range" id="range" min="0" value="0"  max="100">
+            <div class="icon">
+                <i class="fas fa-3x fa-step-backward" id="previous"></i>
+                <i class="fas fa-3x fa-play-circle" id="masterplay"></i>
+                <i class="fas fa-3x fa-step-forward" id="next"></i>
+                
+            </div>
+            <span class="songinfo">
+                <img src="{% static 'photos/gif.gif' %}" alt="error" id="gifim" >
+              
+                <span id="masterSongName">  No Songs selected</span>
+            </span>
+        </div>
+        <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+    </nav>
+</body>
+</html>
