@@ -21,6 +21,6 @@ from django.shortcuts import redirect
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  # path('', lambda request: redirect('/demo/spotify/', permanent=True)),
+                  path('', lambda request: redirect('/demo/spotify/', permanent=True)),
                   path('demo/', include('spotify_demo.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
